@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Montando o Prato Saudável</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2e8b57;
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .question p {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options label {
+            display: block;
+            padding: 10px;
+            background-color: #e6f2e6;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .options label:hover {
+            background-color: #d1e9d1;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        #submit-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            font-size: 1.2em;
+            background-color: #2e8b57;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #submit-btn:hover {
+            background-color: #3cb371;
+        }
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0fff0;
+            border: 2px solid #2e8b57;
+            display: none;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .incorrect {
+            color: red;
+            font-weight: bold;
+        }
+        .info {
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Quiz: Montando o Prato Saudável</h1>
+    <p>Leia cada pergunta e selecione a resposta correta.</p>
+    
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. Imagine que você está montando um prato saudável e pode escolher 3 opções de proteína (frango, peixe, ovos), 4 opções de carboidratos complexos (arroz integral, batata doce, quinoa, pão integral) e 5 opções de vegetais (brócolis, alface, tomate, cenoura, couve-flor). Usando o princípio multiplicativo, quantas combinações diferentes de pratos você pode montar?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q1" value="a"> A) 12 combinações</label></li>
+                <li><label><input type="radio" name="q1" value="b"> B) 20 combinações</label></li>
+                <li><label><input type="radio" name="q1" value="c"> C) 60 combinações</label></li>
+                <li><label><input type="radio" name="q1" value="d"> D) 120 combinações</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>2. Considerando um lanche da tarde, você tem 2 opções de frutas (maçã, banana), 3 opções de oleaginosas (amêndoas, castanhas, nozes) e 2 opções de iogurte (natural, desnatado). Quantas combinações diferentes de lanches você pode criar, escolhendo uma opção de cada categoria?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q2" value="a"> A) 7 combinações</label></li>
+                <li><label><input type="radio" name="q2" value="b"> B) 12 combinações</label></li>
+                <li><label><input type="radio" name="q2" value="c"> C) 8 combinações</label></li>
+                <li><label><input type="radio" name="q2" value="d"> D) 15 combinações</label></li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <p>3. Um nutricionista sugere que para uma salada, você escolha entre 3 tipos de folhas (alface, rúcula, espinafre), 4 tipos de legumes cozidos (brócolis, cenoura, beterraba, abobrinha) e 2 tipos de molho (azeite, limão). Quantas saladas diferentes podem ser montadas seguindo essa recomendação?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q3" value="a"> A) 24 saladas</label></li>
+                <li><label><input type="radio" name="q3" value="b"> B) 9 saladas</label></li>
+                <li><label><input type="radio" name="q3" value="c"> C) 18 saladas</label></li>
+                <li><label><input type="radio" name="q3" value="d"> D) 12 saladas</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>4. Qual das seguintes afirmações melhor representa uma <strong>tese</strong> sobre o consumo diário de frutas?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q4" value="a"> A) A Organização Mundial da Saúde recomenda o consumo de cinco porções de frutas e vegetais por dia.</label></li>
+                <li><label><input type="radio" name="q4" value="b"> B) O consumo regular de frutas contribui significativamente para a prevenção de doenças crônicas e a manutenção de um sistema imunológico robusto.</label></li>
+                <li><label><input type="radio" name="q4" value="c"> C) Muitas pessoas não consomem a quantidade adequada de frutas devido à falta de tempo ou ao custo.</label></li>
+                <li><label><input type="radio" name="q4" value="d"> D) Frutas são saborosas e podem ser incorporadas em diversas receitas.</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>5. Se a tese é 'A hidratação adequada é fundamental para o bom funcionamento do corpo humano', qual das opções abaixo <strong>NÃO</strong> seria um argumento forte para sustentá-la?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q5" value="a"> A) A água regula a temperatura corporal e transporta nutrientes.</label></li>
+                <li><label><input type="radio" name="q5" value="b"> B) A desidratação pode levar à fadiga e dores de cabeça.</label></li>
+                <li><label><input type="radio" name="q5" value="c"> C) A maioria das pessoas prefere bebidas açucaradas à água pura.</label></li>
+                <li><label><input type="radio" name="q5" value="d"> D) O corpo humano é composto por aproximadamente 60% de água.</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>6. Sua tese é: 'A inclusão de vegetais variados no prato diário é crucial para uma nutrição completa'. Qual dos seguintes argumentos oferece o melhor suporte para essa tese?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q6" value="a"> A) Vegetais são geralmente mais caros que outros alimentos.</label></li>
+                <li><label><input type="radio" name="q6" value="b"> B) Vegetais fornecem uma ampla gama de vitaminas, minerais e fibras essenciais para diversas funções corporais.</label></li>
+                <li><label><input type="radio" name="q6" value="c"> C) Muitas crianças não gostam de comer vegetais.</label></li>
+                <li><label><input type="radio" name="q6" value="d"> D) Receitas com vegetais são frequentemente compartilhadas em redes sociais.</label></li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <p>7. Qual a relação de <strong>causa e consequência</strong> mais direta entre o consumo excessivo de alimentos ultraprocessados e a saúde?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q7" value="a"> A) Consumir alimentos ultraprocessados causa a diminuição do desejo por doces.</label></li>
+                <li><label><input type="radio" name="q7" value="b"> B) O consumo excessivo de ultraprocessados pode levar ao ganho de peso e ao aumento do risco de doenças crônicas como diabetes tipo 2.</label></li>
+                <li><label><input type="radio" name="q7" value="c"> C) Alimentos ultraprocessados são mais caros, o que causa um impacto positivo na economia local.</label></li>
+                <li><label><input type="radio" name="q7" value="d"> D) Comer ultraprocessados ocasionalmente garante uma dieta equilibrada e variada.</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>8. Identifique a relação de <strong>causa e consequência</strong> correta: 'A prática regular de atividade física (causa) resulta em...'</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q8" value="a"> A) ...aumento do estresse e diminuição da qualidade do sono (consequência).</label></li>
+                <li><label><input type="radio" name="q8" value="b"> B) ...melhora da saúde cardiovascular e fortalecimento muscular (consequência).</label></li>
+                <li><label><input type="radio" name="q8" value="c"> C) ...maior consumo de alimentos não saudáveis devido ao aumento do apetite (consequência).</label></li>
+                <li><label><input type="radio" name="q8" value="d"> D) ...dependência de suplementos alimentares para manter a energia (consequência).</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>9. Qual é a principal <strong>consequência</strong> da ingestão insuficiente de fibras em uma dieta, considerando que a <strong>causa</strong> é a baixa ingestão de vegetais e grãos integrais?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q9" value="a"> A) Aumento da energia e melhora da digestão.</label></li>
+                <li><label><input type="radio" name="q9" value="b"> B) Risco elevado de doenças cardiovasculares e câncer de cólon.</label></li>
+                <li><label><input type="radio" name="q9" value="c"> C) Melhora da absorção de vitaminas lipossolúveis.</label></li>
+                <li><label><input type="radio" name="q9" value="d"> D) Diminuição do colesterol LDL (colesterol 'ruim').</label></li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <p>10. Ao considerarmos que 'o consumo de bebidas açucaradas em excesso' é a <strong>causa</strong>, qual das opções a seguir é uma <strong>consequência</strong> direta e comprovada para a saúde?</p>
+            <ul class="options">
+                <li><label><input type="radio" name="q10" value="a"> A) Melhora da hidratação e aumento da concentração.</label></li>
+                <li><label><input type="radio" name="q10" value="b"> B) Redução do risco de cáries e ganho de massa muscular.</label></li>
+                <li><label><input type="radio" name="q10" value="c"> C) Aumento do risco de obesidade, diabetes tipo 2 e problemas dentários.</label></li>
+                <li><label><input type="radio" name="q10" value="d"> D) Fortalecimento do sistema imunológico e melhora da qualidade do sono.</label></li>
+            </ul>
+        </div>
+
+        <button type="button" id="submit-btn">Verificar Respostas</button>
+    </form>
+
+    <div id="results" style="display:none;">
+        <h2>Resultado</h2>
+        <p>Você acertou <span id="score">0</span> de 10 perguntas.</p>
+        <p>Abaixo estão suas respostas, com feedback para as que você errou.</p>
+        <div id="feedback-container"></div>
+    </div>
+</div>
+
+<script>
+    const quizForm = document.getElementById('quiz-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const resultsDiv = document.getElementById('results');
+    const scoreSpan = document.getElementById('score');
+    const feedbackContainer = document.getElementById('feedback-container');
+
+    const correctAnswers = {
+        q1: 'c',
+        q2: 'b',
+        q3: 'a',
+        q4: 'b',
+        q5: 'c',
+        q6: 'b',
+        q7: 'b',
+        q8: 'b',
+        q9: 'b',
+        q10: 'c'
+    };
+
+    const rationales = {
+        q1: 'O número de combinações é obtido multiplicando-se o número de opções de cada categoria: 3 x 4 x 5 = 60.',
+        q2: 'Multiplicando as opções de cada categoria (2 x 3 x 2), obtemos 12 combinações diferentes.',
+        q3: 'Multiplicando o número de escolhas em cada categoria (3 x 4 x 2), você obtém 24 combinações diferentes de saladas.',
+        q4: 'Esta afirmação é uma tese, pois apresenta uma ideia que pode ser sustentada por argumentos científicos e evidências.',
+        q5: 'Esta afirmação é uma observação sobre preferências, mas não é um argumento que sustenta a importância da hidratação para o funcionamento do corpo.',
+        q6: 'Este argumento sustenta a tese ao explicar como os vegetais contribuem para a nutrição completa através de seus nutrientes.',
+        q7: 'O alto teor de açúcares, gorduras e sódio em ultraprocessados (causa) contribui para o ganho de peso e o risco de doenças crônicas (consequência).',
+        q8: 'A prática regular de atividade física (causa) comprovadamente leva à melhora da saúde cardiovascular e ao fortalecimento muscular (consequências).',
+        q9: 'A baixa ingestão de fibras (causa) está associada a um maior risco de doenças cardiovasculares e problemas digestivos, como o câncer de cólon (consequências).',
+        q10: 'O alto teor de açúcar nessas bebidas (causa) contribui diretamente para o ganho de peso, resistência à insulina (levando a diabetes tipo 2) e cáries dentárias (consequências).'
+    };
+
+    submitBtn.addEventListener('click', () => {
+        let score = 0;
+        feedbackContainer.innerHTML = '';
+        const questions = document.querySelectorAll('.question');
+        
+        questions.forEach((question, index) => {
+            const questionName = `q${index + 1}`;
+            const userAnswer = quizForm.elements[questionName].value;
+            const correctAnswer = correctAnswers[questionName];
+            const questionText = question.querySelector('p').textContent;
+            
+            const feedbackItem = document.createElement('div');
+            feedbackItem.classList.add('feedback-item');
+            
+            if (userAnswer === correctAnswer) {
+                score++;
+                feedbackItem.innerHTML = `<p class="correct">Questão ${index + 1}: Resposta correta!</p>`;
+            } else {
+                const selectedOption = question.querySelector(`input[name="${questionName}"]:checked`);
+                const selectedText = selectedOption ? selectedOption.nextElementSibling.textContent : 'Não respondida';
+                
+                feedbackItem.innerHTML = `
+                    <p class="incorrect">Questão ${index + 1}: Resposta incorreta.</p>
+                    <p>Sua resposta: ${selectedText}</p>
+                    <p>Resposta correta: ${correctAnswer.toUpperCase()}) ${getCorrectOptionText(question, correctAnswer)}</p>
+                    <p class="info"><strong>Explicação:</strong> ${rationales[questionName]}</p>
+                `;
+            }
+            feedbackContainer.appendChild(feedbackItem);
+        });
+
+        scoreSpan.textContent = score;
+        resultsDiv.style.display = 'block';
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+
+    function getCorrectOptionText(questionElement, correctAnswerValue) {
+        const options = questionElement.querySelectorAll('.options input');
+        let correctText = '';
+        options.forEach(option => {
+            if (option.value === correctAnswerValue) {
+                correctText = option.nextElementSibling.textContent;
+            }
+        });
+        return correctText;
+    }
+</script>
+
+</body>
+</html>
