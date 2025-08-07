@@ -13,7 +13,8 @@
     <p>Leia cada pergunta e selecione a resposta correta.</p>
     
     <form id="quiz-form">
-        <div class="question">
+        <!-- Questão 1 -->
+        <div class="question" data-correct-answer="c">
             <p>1. Imagine que você está montando um prato saudável e pode escolher 3 opções de proteína (frango, peixe, ovos), 4 opções de carboidratos complexos (arroz integral, batata doce, quinoa, pão integral) e 5 opções de vegetais (brócolis, alface, tomate, cenoura, couve-flor). Usando o princípio multiplicativo, quantas combinações diferentes de pratos você pode montar?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q1" value="a"> A) 12 combinações</label></li>
@@ -21,9 +22,11 @@
                 <li><label><input type="radio" name="q1" value="c"> C) 60 combinações</label></li>
                 <li><label><input type="radio" name="q1" value="d"> D) 120 combinações</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 2 -->
+        <div class="question" data-correct-answer="b">
             <p>2. Considerando um lanche da tarde, você tem 2 opções de frutas (maçã, banana), 3 opções de oleaginosas (amêndoas, castanhas, nozes) e 2 opções de iogurte (natural, desnatado). Quantas combinações diferentes de lanches você pode criar, escolhendo uma opção de cada categoria?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q2" value="a"> A) 7 combinações</label></li>
@@ -31,9 +34,11 @@
                 <li><label><input type="radio" name="q2" value="c"> C) 8 combinações</label></li>
                 <li><label><input type="radio" name="q2" value="d"> D) 15 combinações</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
         
-        <div class="question">
+        <!-- Questão 3 -->
+        <div class="question" data-correct-answer="a">
             <p>3. Um nutricionista sugere que para uma salada, você escolha entre 3 tipos de folhas (alface, rúcula, espinafre), 4 tipos de legumes cozidos (brócolis, cenoura, beterraba, abobrinha) e 2 tipos de molho (azeite, limão). Quantas saladas diferentes podem ser montadas seguindo essa recomendação?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q3" value="a"> A) 24 saladas</label></li>
@@ -41,9 +46,11 @@
                 <li><label><input type="radio" name="q3" value="c"> C) 18 saladas</label></li>
                 <li><label><input type="radio" name="q3" value="d"> D) 12 saladas</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 4 -->
+        <div class="question" data-correct-answer="b">
             <p>4. Qual das seguintes afirmações melhor representa uma <strong>tese</strong> sobre o consumo diário de frutas?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q4" value="a"> A) A Organização Mundial da Saúde recomenda o consumo de cinco porções de frutas e vegetais por dia.</label></li>
@@ -51,9 +58,11 @@
                 <li><label><input type="radio" name="q4" value="c"> C) Muitas pessoas não consomem a quantidade adequada de frutas devido à falta de tempo ou ao custo.</label></li>
                 <li><label><input type="radio" name="q4" value="d"> D) Frutas são saborosas e podem ser incorporadas em diversas receitas.</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 5 -->
+        <div class="question" data-correct-answer="c">
             <p>5. Se a tese é 'A hidratação adequada é fundamental para o bom funcionamento do corpo humano', qual das opções abaixo <strong>NÃO</strong> seria um argumento forte para sustentá-la?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q5" value="a"> A) A água regula a temperatura corporal e transporta nutrientes.</label></li>
@@ -61,9 +70,11 @@
                 <li><label><input type="radio" name="q5" value="c"> C) A maioria das pessoas prefere bebidas açucaradas à água pura.</label></li>
                 <li><label><input type="radio" name="q5" value="d"> D) O corpo humano é composto por aproximadamente 60% de água.</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 6 -->
+        <div class="question" data-correct-answer="b">
             <p>6. Sua tese é: 'A inclusão de vegetais variados no prato diário é crucial para uma nutrição completa'. Qual dos seguintes argumentos oferece o melhor suporte para essa tese?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q6" value="a"> A) Vegetais são geralmente mais caros que outros alimentos.</label></li>
@@ -71,9 +82,11 @@
                 <li><label><input type="radio" name="q6" value="c"> C) Muitas crianças não gostam de comer vegetais.</label></li>
                 <li><label><input type="radio" name="q6" value="d"> D) Receitas com vegetais são frequentemente compartilhadas em redes sociais.</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
         
-        <div class="question">
+        <!-- Questão 7 -->
+        <div class="question" data-correct-answer="b">
             <p>7. Qual a relação de <strong>causa e consequência</strong> mais direta entre o consumo excessivo de alimentos ultraprocessados e a saúde?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q7" value="a"> A) Consumir alimentos ultraprocessados causa a diminuição do desejo por doces.</label></li>
@@ -81,9 +94,11 @@
                 <li><label><input type="radio" name="q7" value="c"> C) Alimentos ultraprocessados são mais caros, o que causa um impacto positivo na economia local.</label></li>
                 <li><label><input type="radio" name="q7" value="d"> D) Comer ultraprocessados ocasionalmente garante uma dieta equilibrada e variada.</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 8 -->
+        <div class="question" data-correct-answer="b">
             <p>8. Identifique a relação de <strong>causa e consequência</strong> correta: 'A prática regular de atividade física (causa) resulta em...'</p>
             <ul class="options">
                 <li><label><input type="radio" name="q8" value="a"> A) ...aumento do estresse e diminuição da qualidade do sono (consequência).</label></li>
@@ -91,9 +106,11 @@
                 <li><label><input type="radio" name="q8" value="c"> C) ...maior consumo de alimentos não saudáveis devido ao aumento do apetite (consequência).</label></li>
                 <li><label><input type="radio" name="q8" value="d"> D) ...dependência de suplementos alimentares para manter a energia (consequência).</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 9 -->
+        <div class="question" data-correct-answer="b">
             <p>9. Qual é a principal <strong>consequência</strong> da ingestão insuficiente de fibras em uma dieta, considerando que a <strong>causa</strong> é a baixa ingestão de vegetais e grãos integrais?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q9" value="a"> A) Aumento da energia e melhora da digestão.</label></li>
@@ -101,9 +118,11 @@
                 <li><label><input type="radio" name="q9" value="c"> C) Melhora da absorção de vitaminas lipossolúveis.</label></li>
                 <li><label><input type="radio" name="q9" value="d"> D) Diminuição do colesterol LDL (colesterol 'ruim').</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
 
-        <div class="question">
+        <!-- Questão 10 -->
+        <div class="question" data-correct-answer="c">
             <p>10. Ao considerarmos que 'o consumo de bebidas açucaradas em excesso' é a <strong>causa</strong>, qual das opções a seguir é uma <strong>consequência</strong> direta e comprovada para a saúde?</p>
             <ul class="options">
                 <li><label><input type="radio" name="q10" value="a"> A) Melhora da hidratação e aumento da concentração.</label></li>
@@ -111,15 +130,13 @@
                 <li><label><input type="radio" name="q10" value="c"> C) Aumento do risco de obesidade, diabetes tipo 2 e problemas dentários.</label></li>
                 <li><label><input type="radio" name="q10" value="d"> D) Fortalecimento do sistema imunológico e melhora da qualidade do sono.</label></li>
             </ul>
+            <div class="feedback-box"></div>
         </div>
-
-        <button type="button" id="submit-btn">Verificar Respostas</button>
     </form>
 
     <div id="results" style="display:none;">
         <h2>Resultado</h2>
-        <p>Você acertou <span id="score">0</span> de 10 perguntas.</p>
-        <div id="feedback-container"></div>
+        <p>Você acertou <span id="score">0</span> de <span id="total-questions">10</span> perguntas.</p>
     </div>
 </div>
 
